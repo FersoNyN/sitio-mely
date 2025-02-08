@@ -28,13 +28,13 @@ export default function FlorAnimada() {
     `;
   
     return (
-      <div className="flex flex-col items-center justify-center min-h-auto text-white p-6">
-        <h1 className="text-3xl font-bold text-pink-400 mb-3">🌸 Un regalo para una preciosa 🌸</h1>
+      <div className="flex flex-col items-center justify-center min-h-auto text-white p-6 w-full overflow-hidden">
+        <h1 className="text-3xl font-bold text-pink-400 mb-4 text-center">🌸 Un regalo para una preciosa 🌸</h1>
         
         {/* Simulación de terminal */}
         {!mostrarFlor && (
           <motion.div
-            className="bg-white p-3 rounded-xl w-full max-w-auto text-blue-500 font-mono shadow-lg"
+            className="bg-white p-4 rounded-xl w-full max-w-sm sm:max-w-md text-blue-500 font-mono text-xs sm:text-sm shadow-lg overflow-auto"
             initial={{ opacity: 1 }}
             animate={{ opacity: mostrarFlor ? 0 : 1 }}
             transition={{ duration: 0.5 }}
@@ -56,7 +56,7 @@ export default function FlorAnimada() {
         {/* Animación de la flor */}
         {mostrarFlor && (
           <motion.div 
-            className="mt-4"
+            className="mt-4 flex justify-center w-full max-w-xs sm:max-w-md"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
