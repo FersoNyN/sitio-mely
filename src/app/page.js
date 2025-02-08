@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import FlorAnimada from "./FlorAnimada";
 
 export default function Home() {
   const mensajes = [
@@ -55,6 +56,11 @@ export default function Home() {
       >
         🎁 Presiona para un texto sorpresa
       </button>
-    </div>
+
+      <FlorAnimada />
+
+    </div>  
   );
 }
+
+
