@@ -7,24 +7,24 @@ export default function FlorAnimada() {
     const [mostrarFlor, setMostrarFlor] = useState(false);
   
     const codigoFlor = `
-      {mostrarFlor && (
-          <motion.div 
-            className="mt-6"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }} >
-              {/* Tallo */}
-              <x1="75" y1="180" x2="75" y2="100" strokeLinecap="round"/>
-              {/* Hojas */}
-              <ellipse cx="55" cy="140" rx="20" ry="10" fill="green" />
-              <ellipse cx="95" cy="140" rx="20" ry="10" fill="green" />
-              {/* Pétalos */}
-              <circle cx="75" cy="80" r="25" fill="pink" />
-              <circle cx="55" cy="90" r="20" fill="pink" />
-              {/* Centro de la flor */}
-              <circle cx="75" cy="80" r="10" fill="yellow" />
-            </svg>
-          </motion.div> )}
+    {mostrarFlor && (
+    <motion.div 
+    className="mt-6"
+    initial={{ opacity: 0, scale: 0 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1 }} >
+    {/* Tallo */}
+    <x1="75" y1="180" x2="75" y2="100" strokeLinecap="round"/>
+    {/* Hojas */}
+    <ellipse cx="55" cy="140" rx="20" ry="10" fill="green" />
+    <ellipse cx="95" cy="140" rx="20" ry="10" fill="green" />
+    {/* Pétalos */}
+    <circle cx="75" cy="80" r="25" fill="pink" />
+    <circle cx="55" cy="90" r="20" fill="pink" />
+    {/* Centro de la flor */}
+    <circle cx="75" cy="80" r="10" fill="yellow" />
+    </svg>
+    </motion.div> )}
     `;
   
     return (
@@ -34,7 +34,7 @@ export default function FlorAnimada() {
         {/* Simulación de terminal */}
         {!mostrarFlor && (
           <motion.div
-            className="bg-white p-8 rounded-xl text-blue-500 font-mono shadow-lg"
+            className="bg-white p-3 rounded-xl w-full max-w-auto text-blue-500 font-mono shadow-lg"
             initial={{ opacity: 1 }}
             animate={{ opacity: mostrarFlor ? 0 : 1 }}
             transition={{ duration: 0.5 }}
