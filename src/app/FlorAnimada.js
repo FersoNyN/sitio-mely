@@ -49,7 +49,7 @@ export default function FlorAnimada() {
             onClick={() => setMostrarFlor(true)}
             className="mt-4 px-6 py-3 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition duration-300"
           >
-            ▶️ Compilar Flor
+            ▶️ Generar Regalito
           </button>
         )}
         
