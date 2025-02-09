@@ -78,14 +78,15 @@ export default function FlorAnimada() {
               {/* Centro de la flor */}
               <circle cx="75" cy="80" r="10" fill="yellow" />
             </svg>
+
+          {/* Pingüino clickeable */}
+          <Link href="/collage" className="fixed right-12 bottom-0 cursor-pointer">
+            <img src="/pinguino.png" alt="Pingüino" className="fixed right-0 bottom-0 w-12 hover:scale-110 transition duration-300" />
+            <p className="text-center text-blue-500 text-sm font-semibold">Psssss, hey, < br/>haz click en mi pancita<br /> para un secreto!!!</p>
+          </Link>
+
           </motion.div>
         )}
-
-        {/* Pingüino clickeable */}
-      <Link href="/collage" className="fixed right-12 bottom-0 cursor-pointer">
-        <img src="/pinguino.png" alt="Pingüino" className="fixed right-0 bottom-0 w-12 hover:scale-110 transition duration-300" />
-        <p className="text-center text-blue-500 text-sm font-semibold">Psssss, hey, < br/>haz click en mi pancita<br /> para un secreto!!!</p>
-      </Link>
 
       </div>
     );
