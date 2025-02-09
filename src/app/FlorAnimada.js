@@ -82,7 +82,7 @@ export default function FlorAnimada() {
         )}
 
         {/* Pingüino clickeable */}
-      <Link href="/collage" className="absolute right-12 bottom-0 cursor-pointer">
+      <Link href="/collage" className="fixed right-12 bottom-0 cursor-pointer">
         <img src="/pinguino.png" alt="Pingüino" className="fixed right-0 bottom-0 w-12 hover:scale-110 transition duration-300" />
         <p className="text-center text-blue-500 text-sm font-semibold">Psssss, hey, < br/>haz click en mi pancita<br /> para un secreto!!!</p>
       </Link>
