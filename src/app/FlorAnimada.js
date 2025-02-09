@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 
 export default function FlorAnimada() {
     const [mostrarFlor, setMostrarFlor] = useState(false);
@@ -61,7 +63,7 @@ export default function FlorAnimada() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
           >
-            <svg width="150" height="200" viewBox="0 0 150 200" xmlns="http://www.w3.org/2000/svg">
+            <svg width="90%" height="auto" viewBox="0 0 150 200" xmlns="http://www.w3.org/2000/svg">
               {/* Tallo */}
               <line x1="75" y1="180" x2="75" y2="100" stroke="green" strokeWidth="6" strokeLinecap="round" />
               {/* Hojas */}
@@ -78,6 +80,13 @@ export default function FlorAnimada() {
             </svg>
           </motion.div>
         )}
+
+        {/* Pingüino clickeable */}
+      <Link href="/collage" className="absolute right-12 bottom-0 cursor-pointer">
+        <img src="/pinguino.png" alt="Pingüino" className="fixed right-0 bottom-0 w-12 hover:scale-110 transition duration-300" />
+        <p className="text-center text-blue-500 text-sm font-semibold">Psssss, hey, < br/>haz click en mi pancita<br /> para un secreto!!!</p>
+      </Link>
+
       </div>
     );
   }
