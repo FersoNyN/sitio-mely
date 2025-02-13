@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import Link from "next/link";
+
 
 // Configuración del tamaño del rompecabezas
 const piezasX = 4; // Número de columnas
@@ -104,6 +106,10 @@ export default function Rompecabezas() {
         {completado && (
           <div className="mt-6 p-4 bg-white shadow-md rounded-lg text-center text-lg text-green-700">
             ¡Felicidades mi vidaaaaa! Lo completasteeeee. Besote por preciosotaaaaaa 🎉💖
+            <Link href="/poema" className="fixed right-12 bottom-0 cursor-pointer">
+            <img src="/pinguino.png" alt="Pingüino" className="fixed right-0 bottom-0 w-12 hover:scale-110 transition duration-300" />
+            <p className="text-center text-blue-500 text-sm font-semibold">Holaaaa jejejejeje <br /> ahora si, final finalito mi amor! preparada?</p>
+          </Link>
           </div>
         )}
 
