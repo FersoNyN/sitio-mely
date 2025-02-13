@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Collage() {
   const imagenes = [
     { src: "/collage/foto1.jpg", texto: "Los enamorados en un columpio <3" },
@@ -37,6 +39,12 @@ export default function Collage() {
           </div>
         ))}
       </div>
+      {/* Pingüino clickeable */}
+      <Link href="/pinguino" className="fixed right-12 bottom-0 cursor-pointer">
+            <img src="/pinguino.png" alt="Pingüino" className="fixed right-0 bottom-0 w-12 hover:scale-110 transition duration-300" />
+            <p className="text-center text-blue-500 text-sm font-semibold">Holis de nuevo, < br/>haz click en mi <br /> para un acertijo!!!</p>
+          </Link>
+
       <a href="/" className="mt-6 text-blue-600 underline">⬅ Volver a la página principal</a>
     </div>
   );
